@@ -13,6 +13,7 @@ public class InGameState_Pause : InGameState
 
         //Activate pause menu canvas
         gpsm.pauseCanvas.SetActive(true);
+        gpsm.gamePlayCanvas.SetActive(false);
 
         //For extra safety, should init any flags this state depends on
         gpsm.quitButtonPressed = false;
