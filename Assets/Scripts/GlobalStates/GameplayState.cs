@@ -8,6 +8,8 @@ public class GameplayState : GameState
     public override void enterState(GameController gc, GameState previousState = null)
     {
         Debug.Log("Entered Gameplay state.");
+
+        //Setup references to main gameplay objects
         gpsm = GameObject.Find("GameplaySceneManager").GetComponent<GameplaySceneManager>();
     }
 

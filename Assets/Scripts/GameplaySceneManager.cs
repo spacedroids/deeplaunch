@@ -9,9 +9,14 @@ public class GameplaySceneManager : MonoBehaviour
     public InGameState inGameState_Play;
     public InGameState inGameState_Pause;
 
+    //UI Objects
     public GameObject pauseCanvas;
     public GameObject gamePlayCanvas;
 
+    //Gameplay entities
+    public Player player;
+
+    //State flags
     public bool pauseButtonPressed;
     public bool unPauseButtonPressed;
     public bool quitButtonPressed;
@@ -31,6 +36,8 @@ public class GameplaySceneManager : MonoBehaviour
         //Start in play state
         currentState = inGameState_Play;
         currentState.enterState(this);
+
+        player = GameObject.Find("PlayerShip").GetComponent<Player>();
     }
 
     public void PauseButtonClick()

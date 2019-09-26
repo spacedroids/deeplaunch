@@ -11,6 +11,7 @@ public class InGameState_Play : InGameState
         //Should make sure pause menu is hidden on init
         gpsm.pauseCanvas.SetActive(false);
         gpsm.gamePlayCanvas.SetActive(true);
+
     }
 
     public override void doUpdate(GameplaySceneManager gpsm)
@@ -19,6 +20,10 @@ public class InGameState_Play : InGameState
         {
             gpsm.pauseButtonPressed = false;
             changeState(gpsm.inGameState_Pause, gpsm);
+        }
+        if(Input.GetKeyDown("space"))
+        {
+            gpsm.player.Thrust();
         }
     }
 
