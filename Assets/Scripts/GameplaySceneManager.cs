@@ -27,6 +27,11 @@ public class GameplaySceneManager : MonoBehaviour
         inGameState_Pause = new InGameState_Pause();
     }
 
+    public void Awake()
+    {
+        GameController.Instance.gpsm = this;
+    }
+
     public void Start()
     {
         //Hack to ensure GameController is instantiated if Gameplay scene is loaded directly from Unity SDK

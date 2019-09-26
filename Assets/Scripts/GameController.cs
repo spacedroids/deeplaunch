@@ -19,6 +19,9 @@ public class GameController : MonoSingleton<GameController> {
 
 	public GameState nextStateOnLoaded;
 
+    //References to objects that require global access
+    public GameplaySceneManager gpsm;
+
 	//Storage manager for all reads/writes of data that needs to persist between game sessions.
 	//public DataStore storage;
 
