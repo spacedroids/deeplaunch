@@ -2,29 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Ship
 {
     public float MAXHEALTH = 100f;
 
     public float speed;
-    public float health;
 
-    private Rigidbody rigidbody;
 
     public void Start()
     {
-        health = MAXHEALTH;
-        rigidbody = GetComponent<Rigidbody>();
+        health = maxHealth;
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         //Space friction
-        rigidbody.velocity *= .999f;
-        speed = rigidbody.velocity.magnitude;
+        _rigidbody.velocity *= .999f;
+        speed = _rigidbody.velocity.magnitude;
     }
 
     public void Thrust() {
-        rigidbody.velocity += transform.forward * 5;
+        _rigidbody.velocity += transform.forward * 5;
     }
 }
