@@ -1129,10 +1129,12 @@ MonoBehaviour:
   pauseCanvas: {fileID: 1319274039}
   gamePlayCanvas: {fileID: 935897386}
   playerSpeedTelemetry: {fileID: 1379216606}
+  playerDistanceTelemetry: {fileID: 1936667848}
   player: {fileID: 0}
   pauseButtonPressed: 0
   unPauseButtonPressed: 0
   quitButtonPressed: 0
+  distanceTravelled: 0
 --- !u!4 &710938934
 Transform:
   m_ObjectHideFlags: 0
@@ -1295,9 +1297,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0311bce242c4dcdafd229661f687e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 0
+  shieldHealth: 0
+  maxShieldHealth: 0
+  explosionScale: 1
   MAXHEALTH: 100
   speed: 0
-  health: 0
 --- !u!4 &987298295
 Transform:
   m_ObjectHideFlags: 0

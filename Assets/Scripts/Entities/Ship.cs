@@ -63,7 +63,6 @@ public class Ship : MonoBehaviour
         GameObject explosion = Object.Instantiate(GameController.Instance.smallExplosionPrefab, gameObject.transform.position, gameObject.transform.rotation);
         explosion.transform.localScale = new Vector3(explosionScale, explosionScale, explosionScale);
         Destroy(explosion, 2);
-        Destroy(gameObject);
     }
 
     public virtual void Update() { }

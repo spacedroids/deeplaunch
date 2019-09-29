@@ -15,6 +15,7 @@ public class GameplaySceneManager : MonoBehaviour
     public GameObject gamePlayCanvas;
     //UI Elements
     public Text playerSpeedTelemetry;
+    public Text playerDistanceTelemetry;
 
     //Gameplay entities
     public Player player;
@@ -23,6 +24,9 @@ public class GameplaySceneManager : MonoBehaviour
     public bool pauseButtonPressed;
     public bool unPauseButtonPressed;
     public bool quitButtonPressed;
+
+    //Game data
+    public float distanceTravelled;
 
     private void InstantiateInGameStates()
     {

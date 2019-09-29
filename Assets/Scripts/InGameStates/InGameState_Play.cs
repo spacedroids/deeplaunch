@@ -22,6 +22,8 @@ public class InGameState_Play : InGameState
             changeState(gpsm.inGameState_Pause, gpsm);
         }
         gpsm.playerSpeedTelemetry.text = Mathf.Round(gpsm.player.speed).ToString();
+        gpsm.playerDistanceTelemetry.text = Mathf.Round(gpsm.player.transform.position.z).ToString();
+
         if(Input.GetKeyDown("space"))
         {
             gpsm.player.Thrust();
