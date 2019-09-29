@@ -50,7 +50,7 @@ public class GameplaySceneManager : MonoBehaviour
 
     void Update()
     {
-        playerSpeedTelemetry.text = Mathf.Round(player.speed).ToString();
+
     }
 
     public void PauseButtonClick()
