@@ -23,8 +23,7 @@ public class Player : MonoBehaviour
     }
 
     public void Thrust() {
-        speed += 10;
-        //rigidbody.velocity = new Vector3(0, 10, 0);
-        rigidbody.velocity = transform.forward * 10;
+        rigidbody.velocity += transform.forward * 5;
+        speed = rigidbody.velocity.magnitude;
     }
 }
