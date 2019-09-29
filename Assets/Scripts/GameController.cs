@@ -19,6 +19,10 @@ public class GameController : MonoSingleton<GameController> {
 
 	public GameState nextStateOnLoaded;
 
+    //Prefabs
+    public GameObject weakEnemyPrefab;
+    public GameObject smallExplosionPrefab;
+
     //References to objects that require global access
     public GameplaySceneManager gpsm;
 
@@ -36,11 +40,14 @@ public class GameController : MonoSingleton<GameController> {
 	}
 
 	protected override void Awake() {
-		//Base 'MonoSingleton' class will setup this object as `DontDestroyOnLoad`
-		base.Awake();
-	}
+        //Base 'MonoSingleton' class will setup this object as `DontDestroyOnLoad`
+        base.Awake();
 
-	void Start() {
+        weakEnemyPrefab = (GameObject)Resources.Load("Enemies/EnemyShip");
+        //smallExplosionPrefab = 
+    }
+
+    void Start() {
 		Application.targetFrameRate = 60;
 		InstantiateStateClasses();
 		//If curretState is null, then we're in a pre-initialized state
