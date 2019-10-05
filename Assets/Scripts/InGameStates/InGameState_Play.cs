@@ -28,6 +28,10 @@ public class InGameState_Play : InGameState
         {
             gpsm.player.Thrust();
         }
+
+        if(Input.GetKeyDown("'")) {
+            gpsm.player.Damage(1000, 1f);
+        }
     }
 
 }

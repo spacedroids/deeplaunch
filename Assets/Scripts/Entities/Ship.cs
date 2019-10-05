@@ -13,6 +13,7 @@ public class Ship : MonoBehaviour
     protected bool shieldsUp = false;
 
     public virtual void Start() {
+        health = maxHealth;
         _rigidbody = gameObject.GetComponent<Rigidbody>();
     }
 

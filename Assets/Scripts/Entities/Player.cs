@@ -8,18 +8,12 @@ public class Player : Ship
 
     public float speed;
 
-
-    public void Start()
-    {
-        health = maxHealth;
-        _rigidbody = GetComponent<Rigidbody>();
-    }
-
-    void Update()
+    public override void Update()
     {
         //Space friction
         _rigidbody.velocity *= .999f;
         speed = _rigidbody.velocity.magnitude;
+        base.Update();
     }
 
     public void Thrust() {

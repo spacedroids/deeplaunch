@@ -44,7 +44,7 @@ public class GameController : MonoSingleton<GameController> {
         base.Awake();
 
         weakEnemyPrefab = (GameObject)Resources.Load("Enemies/EnemyShip");
-        //smallExplosionPrefab = 
+        smallExplosionPrefab = (GameObject)Resources.Load("Explosions/SmallExplosion");
     }
 
     void Start() {
